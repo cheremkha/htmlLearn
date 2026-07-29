@@ -4,7 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My learn</title>
-    <link rel="stylesheet" href="style/style.css">
+    <!-- <link rel="stylesheet" href="style/style.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // вмикаємо тестування у bdd стилі
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+     <script>
+       // chai має багато всього, давайте зробимо assert глобальним
+        let assert = chai.assert;
+    </script>
 </head>
 <body>
     <!-- <h1>Travel Guide</h1>
@@ -29,12 +39,29 @@
     <p style="color: green; font-size: 150%; font-family: 'Courier New', Courier, monospace;">I'm green</p>
     <p style="font-size: 50px;">I'm big</p> -->
 
-    <p style="text-align: center;"><b>This text is bold</b></p>
+    <!-- <p style="text-align: center;"><b>This text is bold</b></p>
     <p><i>This text is italic</i></p>
-    <p>This is <sub>subscript</sub> and <sup>superscript</sup></p>
+    <p>This is <sub>subscript</sub> and <sup>superscript</sup></p> -->
+    <script>
+    function pow(x, n) {
+    /* код функції треба написати, поки що цей блок пустий */
+    }
+    </script>
+
+    <!-- скрипт з тестами (describe, it...) -->
+    <script src="test.js"></script>
+
+    <!-- елемент з id="mocha" буде містити результати тестів -->
+    <div id="mocha"></div>
+
+    <!-- запускаємо тести! -->
+    <script>
+        mocha.run();
+    </script>
     
     <!-- <script src="./scrypt/cycles.js"></script> -->
-    <script src="./scrypt/switch.js"></script>
+    <!-- <script src="./scrypt/switch.js"></script> -->
+    <!-- <script src="./scrypt/testing.js"></script> -->
     
 </body>
 </html>

@@ -1,0 +1,4 @@
+function pow(x, n) {
+
+}
+
