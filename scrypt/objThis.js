@@ -28,21 +28,50 @@
 
 
 
-let ladder = {
-  step: 0,
-  up() {
-    this.step++;
-    return this;
-  },
-  down() {
-    this.step--;
-    return this;
-},
-showStep: function() { // показує поточний крок
-    alert( this.step );
-    return this;
-  }
-};
+// let ladder = {
+//   step: 0,
+//   up() {
+//     this.step++;
+//     return this;
+//   },
+//   down() {
+//     this.step--;
+//     return this;
+// },
+// showStep: function() { // показує поточний крок
+//     alert( this.step );
+//     return this;
+//   }
+// };
 
-ladder
-    .down()
+// ladder
+//     .down()
+
+
+
+// function Calculator () {
+//     this.read = function () {
+//         this.a = +prompt("a? : ")
+//         this.b = +prompt("b? : ")
+//     };
+//     this.sum = function() {
+//         return this.a + this.b;
+//     };
+//     this.mul = function() {
+//         return this.a * this.b;
+//     };
+// }
+
+// const calculator = new Calculator();
+// calculator.read();
+// alert( calculator.sum() );
+// alert( calculator.mul() );
+
+
+
+function Accumulator(startigValue) {
+  this.value = startigValue;
+  this.read = function() {
+    this.value += +prompt("input new value: ", 0);
+  };
+}
