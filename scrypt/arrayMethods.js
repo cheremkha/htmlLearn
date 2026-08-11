@@ -166,17 +166,87 @@
 
 //==========================================================================//
 
-//task 8 
+// //task 8 
 
-let ivan = { name: "Іван", surname: "Іванко", id: 1 };
-let petro = { name: "Петро", surname: "Петренко", id: 2 };
-let mariya = { name: "Марія", surname: "Мрійко", id: 3 };
+// let ivan = { name: "Іван", surname: "Іванко", id: 1 };
+// let petro = { name: "Петро", surname: "Петренко", id: 2 };
+// let mariya = { name: "Марія", surname: "Мрійко", id: 3 };
 
-let users = [ ivan, petro, mariya ];
+// let users = [ ivan, petro, mariya ];
 
-let usersMapped = users.map( item => ({
-        fullName: (item.name + " " + item.surname),
-        id: item.id,
-}))
-console.log( usersMapped[0].id ); // 1
-console.log( usersMapped[0].fullName ); // Іван Іванко
+// let usersMapped = users.map( item => ({
+//         fullName: (item.name + " " + item.surname),
+//         id: item.id,
+// }))
+// console.log( usersMapped[0].id ); // 1
+// console.log( usersMapped[0].fullName ); // Іван Іванко
+
+
+// ================================================================//
+
+// task previos
+
+
+// function unique(array) {
+//         let result = [array[0]];
+//         for (let i = 0; i < array.length; i++) {
+//                 for (let j = 0; j < result.length; j++) {
+//                         if(result[j] !== array[i])
+//                                 result.push(array[i]);
+                        
+//                 }
+//         }
+//         return result;
+// }
+
+
+// let strings = ["Привіт", "Світ", "Привіт", "Світ",
+//   "Привіт", "Привіт", "Світ", "Світ", ":-O"
+// ];
+
+// console.log( unique(strings) ); // Привіт, Світ, :-O
+
+
+
+
+
+// function unique(arr) {
+//        let result = []
+//        arr.slice().reverse().forEach( (item, index) => {
+//                 if(!(arr.includes(item, index+1)))
+//                        result.push(item);
+//        })
+//        return result.reverse();
+// }
+
+// let strings = ["Привіт", "Світ", "Привіт", "Світ",
+//   "Привіт", "Привіт", "Світ", "Світ", ":-O"
+// ];
+
+// console.log( unique(strings) ); // Привіт, Світ, :-O
+
+
+
+// ================================================= //
+
+
+// last 
+
+
+ let users = [
+  {id: 'іван', name: "Іван Іванко", age: 20},
+  {id: 'ганна', name: "Ганна Іванко", age: 24},
+  {id: 'петро', name: "Петро Петренко", age: 31},
+];
+
+
+function groupById(objArr) {
+        return objArr.reduce( (acamulator, objelem) => {
+                acamulator[objelem.id] = objelem;
+                return acamulator;
+        }, {})
+}
+
+let usersById = groupById(users);
+console.log(usersById)
+
