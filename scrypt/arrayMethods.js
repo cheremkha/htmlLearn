@@ -241,12 +241,14 @@
 
 
 function groupById(objArr) {
-        return objArr.reduce( (acamulator, objelem) => {
-                acamulator[objelem.id] = objelem;
-                return acamulator;
-        }, {})
+  return objArr.reduce( (acamulator, objelem) => {
+    acamulator[objelem.id] = objelem;
+    return acamulator;
+}, {})
 }
 
 let usersById = groupById(users);
 console.log(usersById)
+
+
 
