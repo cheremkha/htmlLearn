@@ -31,13 +31,24 @@
 
 
 
-// BUT THIS RIGHT 
+// // BUT THIS RIGHT 
 
-function getWeekDay(date) {
-  let days = ['НД', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+// function getWeekDay(date) {
+//   let days = ['НД', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
 
-  return days[date.getDay()];
+//   return days[date.getDay()];
+// }
+
+// let date = new Date(2014, 0, 3); // 3 січня 2014
+// alert( getWeekDay(date) ); // ПТ
+
+// task 3                    
+
+
+let date = new Date(2012, 0, 3);  // 3 січня 2012
+
+function getLocalDay(date) {
+  return date.getDay()
 }
 
-let date = new Date(2014, 0, 3); // 3 січня 2014
-alert( getWeekDay(date) ); // ПТ
+console.log( getLocalDay(date) );       // вівторок, слід показати 2
