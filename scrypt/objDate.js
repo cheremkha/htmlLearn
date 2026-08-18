@@ -45,10 +45,30 @@
 // task 3                    
 
 
-let date = new Date(2012, 0, 3);  // 3 січня 2012
+// let date = new Date(2012, 0, 3);  // 3 січня 2012
 
-function getLocalDay(date) {
-  return date.getDay()
+// function getLocalDay(date) {
+//   if (date.getDay() === 0) {
+//     return 7
+//   } else {
+//     return date.getDay()
+//   }
+// }
+
+// console.log( getLocalDay(date) );       // вівторок, слід показати 2
+
+
+
+// task 4
+
+let date = new Date(2015, 0, 2);
+
+function getDateAgo(date, dayAgo) {
+  let resultDate = new Date(+date);
+  resultDate.setDate(date.getDate() - dayAgo);
+  return resultDate.getDate();
 }
 
-console.log( getLocalDay(date) );       // вівторок, слід показати 2
+console.log( getDateAgo(date, 1) ); // 1, (1 січня 2015)
+console.log( getDateAgo(date, 2) ); // 31, (31 грудня 2014)
+console.log( getDateAgo(date, 365) ); // 2, (2 січня 2014)
